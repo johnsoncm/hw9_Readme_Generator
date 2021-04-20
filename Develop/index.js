@@ -51,7 +51,7 @@ const questions = [
         },
         {   
         type: 'input',
-        name: 'licsense',
+        name: 'license',
         message: "What is your project's license?",
         },
         {   
@@ -79,11 +79,54 @@ inquirer
 });
 
 function buildReadMe(title, description, install, usage, contribution, test, license, github, email){
-    return `${title}<br>Provide a short description of your project:${description}<br>Installation:What are the steps required to install your project?${install}<br>
-    Usage: Provide instructions and examples for use.${usage}<br>Credits: List your collaborators, if any.${contribution}<br>
-    Test Instructions:${test}<br>License:What is the license for your project?${license}<br>Questions: Github Profile:${github}<br>
-    Email${email}`
-}; 
+    return `# **${title}**
+
+      
+    ## Description
+  
+    ${description}
+  
+    ## Table of Contents
+  
+    -[Description] (#Description)
+    -[Install] (#Install)
+    -[Usage] (#Usage)
+    -[License] (#License)
+    -[Contributors] (#Contributors)
+    -[Test] (#Test)
+    -[Github] (#Github)
+    -[Email] (#Email)
+  
+    ## Install
+  
+      ${install}
+  
+    ## Usage
+    
+      ${usage}
+  
+    ## License
+  
+      ${license}
+  
+    ## Contributors
+      
+      ${contribution}
+  
+    ## Test 
+    
+      ${test}
+  
+    ## Github
+    
+      ${github}
+  
+    ## Email
+    
+      ${email}
+  
+  `;
+  }
 
 
 // // TODO: Create a function to write README file
