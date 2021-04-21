@@ -9,24 +9,23 @@ console.log("choices" , Choices);
 function renderLicenseBadge(license) {
 
   if (license === 'MIT') {
-    return `${licenseBadge} [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-   }
+    return `${license}[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
    }
    if (license === 'Apache 2.0') {
-     return `${licenseBadge} [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+     return `${license} [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
     }
    if (license === 'IPL 1.0') {
-     return `${licenseBadge} [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+     return `${license} [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
    }   
    if (license === 'MPL 2.0') {
-  return `${licenseBadge} [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+  return `${license} [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
    }
    else{
      return "";
 
 
   
-}
+}};
 
 // // TODO: Create a function that returns the license link
 // // If there is no license, return an empty string
@@ -91,5 +90,8 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
-console.log(module.exports);
+module.exports = {
+  generateMarkdown,
+  renderLicenseBadge,
+  renderLicenseLink
+};

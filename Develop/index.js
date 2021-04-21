@@ -2,8 +2,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
+const generateMarkdown =require("./utils/generateMarkdown.js");
+console.log(generateMarkdown.renderLicenseBadge('Apache 2.0'))
 
-
+generateMarkdown.renderLicenseBadge()
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -137,7 +139,7 @@ ${email}
   `;
   }
 
-
+console.log(generateMarkdown.renderLicenseBadge('Apache2.0'))
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
 
