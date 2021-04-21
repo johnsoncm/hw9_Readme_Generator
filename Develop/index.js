@@ -5,16 +5,14 @@ const util = require('util');
 
 
 
-// TODO: Create an array of questions for user input
-// const questions = [];
-
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // const promptUser = () => {
 //     return 
 
-// inquirer.prompt([
 
+
+// TODO: Create an array of questions for user input
 const questions = [
         {
         type: 'input',
@@ -26,18 +24,19 @@ const questions = [
         { 
          type: 'input',
          name: 'description',
-         message: "What is as short description of your project?",
+         message: "Please write a short description of your project: ",
         },
 
         {   
         type: 'input',
         name: 'install',
-        message: "How do you install your project?",
+        message: "What command should be run to install?",
+        default: 'npm i',
         },
         {   
         type: 'input',
         name: 'usage',
-        message: "What is your project's usage information?",
+        message: "What does the user need to know about using the repo?",
         },
         {   
         type: 'input',
@@ -47,12 +46,15 @@ const questions = [
         {   
         type: 'input',
         name: 'test',
-        message: "What is your project's test instructions?",
+        message: "What command should be run to run tests?",
+        default: 'npm test',
         },
         {   
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: "What is your project's license?",
+        choices: ['MIT' , 'IPL 1.0' ,'Apache 2.0', 'MPL 2.0'],
+        default: 'MIT',
         },
         {   
         type: 'input',
@@ -66,64 +68,71 @@ const questions = [
         },
 ];
 
+
+
 inquirer 
     .prompt(questions)
     .then((data) => {
 
+
+        //put in a function below
     fs.writeFile('readme.md', buildReadMe(data.title , data.description, data.install, data.usage, data.contribution, 
-       data.test, data.license, data.github, data.email), (err) =>
+       data.test, data.license, data.github, data.email, data.licenseBadge), (err) =>
        err ? console.log(err) :
-       console.log(data)
+       console.log(data),
+       renderLicenseBadge()
     )
+
 
 });
 
-function buildReadMe(title, description, install, usage, contribution, test, license, github, email){
+function buildReadMe(title, description, install, usage, contribution, test, license, github, email, licenseBadge){
     return `# **${title}**
 
+${licenseBadge}
       
-    ## Description
+## Description
+
+${description}
+
+## Table of Contents
   
-    ${description}
+-[Description](#Description)
+-[Install](#Install)
+-[Usage](#Usage)
+-[License](#License)
+-[Contributors](#Contributors)
+-[Test](#Test)
+-[Github](#Github)
+-[Email](#Email)
   
-    ## Table of Contents
+## Install
   
-    -[Description] (#Description)
-    -[Install] (#Install)
-    -[Usage] (#Usage)
-    -[License] (#License)
-    -[Contributors] (#Contributors)
-    -[Test] (#Test)
-    -[Github] (#Github)
-    -[Email] (#Email)
+${install}
   
-    ## Install
-  
-      ${install}
-  
-    ## Usage
+## Usage
     
-      ${usage}
+${usage}
   
-    ## License
+## License
   
-      ${license}
+${license}
   
-    ## Contributors
+## Contributors
       
-      ${contribution}
+${contribution}
   
-    ## Test 
+## Test 
     
-      ${test}
+${test}
   
-    ## Github
+## Github
     
-      ${github}
+${github}
   
-    ## Email
+## Email
     
-      ${email}
+${email}
   
   `;
   }

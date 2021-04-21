@@ -1,47 +1,48 @@
 # **Readme Generator**
 
+undefined
       
-    ## Description
+## Description
+
+it's a project that generates a readme file
+
+## Table of Contents
   
-    This project automates a readme file
+-[Description](#Description)
+-[Install](#Install)
+-[Usage](#Usage)
+-[License](#License)
+-[Contributors](#Contributors)
+-[Test](#Test)
+-[Github](#Github)
+-[Email](#Email)
   
-    ## Table of Contents
+## Install
   
-    -[Description] (#Description)
-    -[Install] (#Install)
-    -[Usage] (#Usage)
-    -[License] (#License)
-    -[Contributors] (#Contributors)
-    -[Test] (#Test)
-    -[Github] (#Github)
-    -[Email] (#Email)
+npm i
   
-    ## Install
-  
-      run node index in the command line
-  
-    ## Usage
+## Usage
     
-      API instructions for more information
+open source
   
-    ## License
+## License
   
-      MIT
+MIT
   
-    ## Contributors
+## Contributors
       
-      I was the sole coder on this project
+be careful with my code
   
-    ## Test 
+## Test 
     
-      test at your own risk
+npm test
   
-    ## Github
+## Github
     
-      johnsoncm
+johnsoncm
   
-    ## Email
+## Email
     
-      johnsoncm3@gmail.com
+johnsoncm3@gmail.com
   
   
