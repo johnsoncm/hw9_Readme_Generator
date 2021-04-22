@@ -1,48 +1,53 @@
 # **Readme Generator**
 
-undefined
+Placeholder for license badge    
+MIT
+
       
 ## Description
 
-it's a project that generates a readme file
+Generates a readme file
 
 ## Table of Contents
   
--[Description](#Description)
--[Install](#Install)
--[Usage](#Usage)
--[License](#License)
--[Contributors](#Contributors)
--[Test](#Test)
--[Github](#Github)
--[Email](#Email)
+[Description](#Description)<br>
+[Install](#Install)<br>
+[Usage](#Usage)<br>
+[License](#License)<br>
+[Contributors](#Contributors)<br>
+[Test](#Test)<br>
+[Github](#Github)<br>
+[Email](#Email)<br>
   
-## Install
+## Installation
+
+To install necessary dependencies, run the following command:
   
-npm i
+  npm i
   
 ## Usage
     
-open source
-  
+Be careful!
+
 ## License
-  
-MIT
+
+This project is licensed under the MIT license
   
 ## Contributors
       
-be careful with my code
+Be careful!
   
 ## Test 
+
+To run tests, run the following command:
     
-npm test
+  npm test
   
-## Github
-    
-johnsoncm
+## Questions
+
+If you have any questions about the repo, open an issue or contact me directly at johnsoncm3@gmail.com
+
+You can find more of my work at johnsoncm
   
-## Email
-    
-johnsoncm3@gmail.com
   
   

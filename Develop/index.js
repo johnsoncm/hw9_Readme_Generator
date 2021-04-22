@@ -1,13 +1,14 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { getMaxListeners } = require('process');
 const util = require('util');
-const generateMarkdown =require("./utils/generateMarkdown.js");
-console.log(generateMarkdown.renderLicenseBadge('Apache 2.0'))
+const generateMarkdown = require("./utils/generateMarkdown.js");
+console.log(generateMarkdown.renderLicenseBadge('Apache 2.0'));
 
-generateMarkdown.renderLicenseBadge()
 
-const writeFileAsync = util.promisify(fs.writeFile);
+
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 // const promptUser = () => {
 //     return 
@@ -20,6 +21,7 @@ const questions = [
         type: 'input',
         name: 'title',
         message: "What is the title of your project?",
+        default: 'Readme Generator',
 
         },
     
@@ -27,6 +29,7 @@ const questions = [
          type: 'input',
          name: 'description',
          message: "Please write a short description of your project: ",
+         default: 'Generates a readme file',
         },
 
         {   
@@ -39,11 +42,13 @@ const questions = [
         type: 'input',
         name: 'usage',
         message: "What does the user need to know about using the repo?",
+        default: 'Be careful!',
         },
         {   
         type: 'input',
         name: 'contribution',
         message: "What is your project's contribution guidelines?",
+        default: 'Be careful!',
         },
         {   
         type: 'input',
@@ -62,11 +67,13 @@ const questions = [
         type: 'input',
         name: 'github',
         message: "What is your github username?",
+        default: 'johnsoncm',
         },
         {   
         type: 'input',
         name: 'email',
         message: "What is your email address?",
+        default: 'johnsoncm3@gmail.com',
         },
 ];
 
@@ -75,73 +82,83 @@ const questions = [
 inquirer 
     .prompt(questions)
     .then((data) => {
-
+        const queryUrl = `https://api.github.com/users/${data.username}`
 
         //put in a function below
-    fs.writeFile('readme.md', buildReadMe(data.title , data.description, data.install, data.usage, data.contribution, 
-       data.test, data.license, data.github, data.email, data.licenseBadge), (err) =>
+    fs.writeFile('readme.md', generateMarkdown(data.title , data.description, data.install, data.usage, data.contribution, 
+       data.test, data.license, data.github, data.email), (err) =>
        err ? console.log(err) :
        console.log(data),
-       renderLicenseBadge()
+        generateMarkdown.renderLicenseBadge()
+    //    generateMarkdown.renderLicenseBadge(data.licenseBadge),
+     
+       
     )
 
 
 });
 
-function buildReadMe(title, description, install, usage, contribution, test, license, github, email, licenseBadge){
-    return `# **${title}**
+// function buildReadMe(title, description, install, usage, contribution, test, license, github, email, licenseBadge){
+//     return `# **${title}**
 
-${licenseBadge}
+// Placeholder for license badge    
+// ${licenseBadge}
+
       
-## Description
+// ## Description
 
-${description}
+// ${description}
 
-## Table of Contents
+// ## Table of Contents
   
--[Description](#Description)
--[Install](#Install)
--[Usage](#Usage)
--[License](#License)
--[Contributors](#Contributors)
--[Test](#Test)
--[Github](#Github)
--[Email](#Email)
+// [Description](#Description)<br>
+// [Install](#Install)<br>
+// [Usage](#Usage)<br>
+// [License](#License)<br>
+// [Contributors](#Contributors)<br>
+// [Test](#Test)<br>
+// [Github](#Github)<br>
+// [Email](#Email)<br>
   
-## Install
+// ## Installation
+
+// To install necessary dependencies, run the following command:
   
-${install}
+//   ${install}
   
-## Usage
+// ## Usage
     
-${usage}
+// ${usage}
+
+// ## License
+
+// This project is licensed under the ${license} license
   
-## License
-  
-${license}
-  
-## Contributors
+// ## Contributors
       
-${contribution}
+// ${contribution}
   
-## Test 
+// ## Test 
+
+// To run tests, run the following command:
     
-${test}
+//   ${test}
   
-## Github
-    
-${github}
+// ## Questions
+
+// If you have any questions about the repo, open an issue or contact me directly at ${email}
+
+// You can find more of my work at ${github}
   
-## Email
-    
-${email}
   
-  `;
-  }
+//   `;
+//   }
 
 console.log(generateMarkdown.renderLicenseBadge('Apache2.0'))
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
+
+    
 
 // }
 
