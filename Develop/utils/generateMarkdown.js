@@ -5,10 +5,12 @@ const Choices = require("inquirer/lib/objects/choices");
 // const Choices = require('./Develop/index.js');
 console.log("choices" , Choices);
 
+
+let licenseMarkdownText;
 // // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
-  let licenseMarkdownText;
+
 
   switch (license) {
     case 'MIT':
@@ -66,6 +68,7 @@ function generateMarkdown(title, description, install, usage, contribution, test
 
 
   Placeholder for license badge
+  ${licenseMarkdownText}
         
   ## Description
   

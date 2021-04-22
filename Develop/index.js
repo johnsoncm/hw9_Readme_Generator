@@ -3,8 +3,8 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const { getMaxListeners } = require('process');
 const util = require('util');
-const generateMarkdown = require("./utils/generateMarkdown.js");
-console.log(generateMarkdown.renderLicenseBadge('Apache 2.0'));
+const objectMap = require("./utils/generateMarkdown.js");
+
 
 
 
@@ -77,7 +77,7 @@ const questions = [
         },
 ];
 
-
+let licenseMarkdownText;
 
 inquirer 
     .prompt(questions)
@@ -85,11 +85,11 @@ inquirer
         const queryUrl = `https://api.github.com/users/${data.username}`
 
         //put in a function below
-    fs.writeFile('readme.md', generateMarkdown(data.title , data.description, data.install, data.usage, data.contribution, 
-       data.test, data.license, data.github, data.email), (err) =>
+    fs.writeFile('readme.md', objectMap.generateMarkdown(data.title , data.description, data.install, data.usage, data.contribution, 
+       data.test, data.license, data.github, data.email, data.licenseMarkdownText), (err) =>
        err ? console.log(err) :
        console.log(data),
-        generateMarkdown.renderLicenseBadge()
+        objectMap.renderLicenseBadge(licenseMarkdownText)
     //    generateMarkdown.renderLicenseBadge(data.licenseBadge),
      
        
@@ -154,7 +154,7 @@ inquirer
 //   `;
 //   }
 
-console.log(generateMarkdown.renderLicenseBadge('Apache2.0'))
+// console.log(generateMarkdown.renderLicenseBadge('Apache2.0'))
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
 
