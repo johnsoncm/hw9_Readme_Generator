@@ -31,29 +31,31 @@ function renderLicenseBadge(license) {
     }
     return licenseMarkdownText
   }
-  // if (license === 'MIT') {
-  //   return `${licenseBadge}[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-  //  }
-  //  if (license === 'Apache 2.0') {
-  //    return `${licenseBadge} [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-  //   }
-  //  if (license === 'IPL 1.0') {
-  //    return `${licenseBadge} [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
-  //  }   
-  //  if (license === 'MPL 2.0') {
-  // return `${licenseBadge} [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
-  //  }
-  //  else{
-  //    return "";
-
-  
-// }};
 
 
 // // TODO: Create a function that returns the license link
 // // If there is no license, return an empty string
 // function renderLicenseLink(license) {
 
+
+//   switch (license) {
+//     case 'MIT':
+//     licenseMarkdownLink = '(https://opensource.org/licenses/MIT)'
+//     break;
+//     case 'Apache 2.0':
+//       licenseMarkdownLink= '(https://opensource.org/licenses/Apache-2.0)'
+//     break;
+//     case 'IPL 1.0':
+//       licenseMarkdownLink = '(https://opensource.org/licenses/IPL-1.0)'
+//     break;
+//     case 'MPL 2.0':
+//       licenseMarkdownLink = '(https://opensource.org/licenses/MPL-2.0)'
+//     break;
+//     case 'None':
+//       licenseMarkdownLink = "";
+//       break;
+//     }
+//     return licenseMarkdownLink
 
 // }
 
@@ -62,12 +64,16 @@ function renderLicenseBadge(license) {
 // function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(title, description, install, usage, contribution, test, license, github, email, licenseMarkdownText) {
-  let lmt = renderLicenseBadge(licenseMarkdownText)
+function generateMarkdown(title, description, install, usage, contribution, test, license, github, email) {
+  let lmt = renderLicenseBadge(license)
+  // let lml = renderLicenseLink(license)
+  // console.log("lml: " , lml)
+  console.log("lmt: ", lmt)
+
   return `# **${title}**
 
-   Placeholder for license badge
-   ${lmt}
+
+${lmt}
    
         
   ## Description  
@@ -76,8 +82,8 @@ function generateMarkdown(title, description, install, usage, contribution, test
   
   ## Table of Contents
     
-  [Description](#Description)<br>
-  [Install](#Install)<br>
+
+  [Install](#Installation)<br>
   [Usage](#Usage)<br>
   [Contributors](#Contributors)<br>
   [Test](#Test)<br>
@@ -109,7 +115,7 @@ function generateMarkdown(title, description, install, usage, contribution, test
   
   ## License
   
-  This project is licensed under the ${license} license
+  This project is licensed under the ${license}
     
 
   ## Questions

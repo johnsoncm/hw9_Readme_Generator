@@ -66,7 +66,7 @@ const questions = [
         {   
         type: 'input',
         name: 'github',
-        message: "What is your github username?",
+        message: "Please enter your github profile link?",
         default: 'www.github.com/johnsoncm',
         },
         {   
@@ -85,10 +85,14 @@ inquirer
         const queryUrl = `https://api.github.com/users/${data.username}`
        
         //put in a function below
-    fs.writeFile('readme.md', objectMap.generateMarkdown(data.title,  data.description, data.install, data.usage, data.contribution, 
-       data.test, data.license, data.github, data.email, objectMap.liceseMarkdownText, (err) =>
-       err ? console.log(err) :
-       console.log(data),
+    fs.writeFileSync('readme.md', objectMap.generateMarkdown(data.title, data.description, data.install, data.usage, data.contribution, 
+       data.test, data.license, data.github, data.email)
+
+       )});
+       
+    //    , (err) =>
+    //    err ? console.log(err) :
+    //    console.log(data),
 
        
         // objectMap.renderLicenseBadge(data.lmt),
@@ -96,9 +100,7 @@ inquirer
     //    generateMarkdown.renderLicenseBadge(data.licenseBadge),
      
        
-    )
-
-    )});
+ 
 
 
 

@@ -1,7 +1,7 @@
 # **Readme Generator**
 
-   Placeholder for license badge
-   
+
+[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
    
         
   ## Description  
@@ -10,8 +10,8 @@
   
   ## Table of Contents
     
-  [Description](#Description)<br>
-  [Install](#Install)<br>
+
+  [Install](#Installation)<br>
   [Usage](#Usage)<br>
   [Contributors](#Contributors)<br>
   [Test](#Test)<br>
@@ -43,7 +43,7 @@
   
   ## License
   
-  This project is licensed under the MIT license
+  This project is licensed under the IPL 1.0
     
 
   ## Questions
