@@ -67,7 +67,7 @@ const questions = [
         type: 'input',
         name: 'github',
         message: "What is your github username?",
-        default: 'johnsoncm',
+        default: 'www.github.com/johnsoncm',
         },
         {   
         type: 'input',
@@ -77,82 +77,30 @@ const questions = [
         },
 ];
 
-let licenseMarkdownText;
+
 
 inquirer 
     .prompt(questions)
     .then((data) => {
         const queryUrl = `https://api.github.com/users/${data.username}`
-
+       
         //put in a function below
-    fs.writeFile('readme.md', objectMap.generateMarkdown(data.title , data.description, data.install, data.usage, data.contribution, 
-       data.test, data.license, data.github, data.email, data.licenseMarkdownText), (err) =>
+    fs.writeFile('readme.md', objectMap.generateMarkdown(data.title,  data.description, data.install, data.usage, data.contribution, 
+       data.test, data.license, data.github, data.email, objectMap.liceseMarkdownText, (err) =>
        err ? console.log(err) :
        console.log(data),
-        objectMap.renderLicenseBadge(licenseMarkdownText)
+
+       
+        // objectMap.renderLicenseBadge(data.lmt),
+     
     //    generateMarkdown.renderLicenseBadge(data.licenseBadge),
      
        
     )
 
+    )});
 
-});
 
-// function buildReadMe(title, description, install, usage, contribution, test, license, github, email, licenseBadge){
-//     return `# **${title}**
-
-// Placeholder for license badge    
-// ${licenseBadge}
-
-      
-// ## Description
-
-// ${description}
-
-// ## Table of Contents
-  
-// [Description](#Description)<br>
-// [Install](#Install)<br>
-// [Usage](#Usage)<br>
-// [License](#License)<br>
-// [Contributors](#Contributors)<br>
-// [Test](#Test)<br>
-// [Github](#Github)<br>
-// [Email](#Email)<br>
-  
-// ## Installation
-
-// To install necessary dependencies, run the following command:
-  
-//   ${install}
-  
-// ## Usage
-    
-// ${usage}
-
-// ## License
-
-// This project is licensed under the ${license} license
-  
-// ## Contributors
-      
-// ${contribution}
-  
-// ## Test 
-
-// To run tests, run the following command:
-    
-//   ${test}
-  
-// ## Questions
-
-// If you have any questions about the repo, open an issue or contact me directly at ${email}
-
-// You can find more of my work at ${github}
-  
-  
-//   `;
-//   }
 
 // console.log(generateMarkdown.renderLicenseBadge('Apache2.0'))
 // // TODO: Create a function to write README file

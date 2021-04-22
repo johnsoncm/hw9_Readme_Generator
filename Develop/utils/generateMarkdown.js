@@ -6,7 +6,7 @@ const Choices = require("inquirer/lib/objects/choices");
 console.log("choices" , Choices);
 
 
-let licenseMarkdownText;
+let licenseMarkdownText = '';
 // // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
@@ -56,21 +56,21 @@ function renderLicenseBadge(license) {
 
 
 // }
-// Placeholder for license badge    
-// ${licenseBadge}
+
 // // TODO: Create a function that returns the license section of README
 // // If there is no license, return an empty string
 // function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(title, description, install, usage, contribution, test, license, github, email) {
+function generateMarkdown(title, description, install, usage, contribution, test, license, github, email, licenseMarkdownText) {
+  let lmt = renderLicenseBadge(licenseMarkdownText)
   return `# **${title}**
 
-
-  Placeholder for license badge
-  ${licenseMarkdownText}
+   Placeholder for license badge
+   ${lmt}
+   
         
-  ## Description
+  ## Description  
   
   ${description}
   
@@ -79,41 +79,44 @@ function generateMarkdown(title, description, install, usage, contribution, test
   [Description](#Description)<br>
   [Install](#Install)<br>
   [Usage](#Usage)<br>
-  [License](#License)<br>
   [Contributors](#Contributors)<br>
   [Test](#Test)<br>
-  [Github](#Github)<br>
-  [Email](#Email)<br>
+  [License](#License)<br>
+  [Questions](#Questions)<br>
+ 
+  
     
   ## Installation
   
   To install necessary dependencies, run the following command:
     
-    ${install}
+      ${install}
     
   ## Usage
       
   ${usage}
+
+  ## Contributors
+        
+  ${contribution}
+
+  ## Test 
+  
+  To run tests, run the following command:
+    
+      
+    ${test}
   
   ## License
   
   This project is licensed under the ${license} license
     
-  ## Contributors
-        
-  ${contribution}
-    
-  ## Test 
-  
-  To run tests, run the following command:
-      
-    ${test}
-    
+
   ## Questions
   
-  If you have any questions about the repo, open an issue or contact me directly at ${email}
+  If you have any questions about the repo, please contact me directly at: ${email}
   
-  You can find more of my work at ${github}
+  You can find more of my work at: ${github}
     
     
     `;
