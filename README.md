@@ -6,18 +6,18 @@ License Badge and link
 
 When creating an open source project on GiHub, it's important to have a high-quality README file for your application. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to contribute.
 
-The Readme Generator is a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
+The Readme Generator is a command-line application that dynamically generates a professional README file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
 ## Table of Contents
 
-[Technologies Used](#Technology)<br>
-[User Story](#UserStory)<br>
-[Acceptance Criteria](#AcceptanceCriteria)<br>
+[Technologies Used](#Technologies-Used)<br>
+[User Story](#User-Story)<br>
+[Acceptance Criteria](#Acceptance-Criteria)<br>
 [Images](#Images)<br>
 [Demo](#Demo)<br>
 [Contact](#Contact)<br>
 
-## Technology
+## Technologies Used
 
      Javascript
      Node.js
@@ -47,19 +47,25 @@ The Readme Generator is a command-line application that dynamically generates a 
 
 ## Images
 
+## Image of Application:
 
-**![Screenshot of Application]()**
 
-**## Sample README File Generated Using the app:**
+**![Screenshot of Application](./App_SS.png)**
 
-**![Screenshot of Readme File Generated]()**
-**![Screenshot of Readme File Generated]()**
+
+## Sample README File Generated Using the app:
+
+**![Screenshot of Readme File Generated](./Readme_SS.png)**
+**![Screenshot of Readme File Generated](./Readme_SS2.png)**
 
 
 ## Demo
 
-**[Link to Walthrough Video](https://)**
+**[Link to Walthrough Video](https://drive.google.com/file/d/1QBMCG3vTftEU501xRg2XVOdi8OSIdl4D/preview)**
 
+## Contact
+
+If you have any questions about this repo, please contact me at [johnsoncm](https://www.github.com/johnsoncm)
 
 
 
