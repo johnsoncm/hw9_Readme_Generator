@@ -1,6 +1,6 @@
 ## README Generator
 
-License Badge and link
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
@@ -47,13 +47,15 @@ The Readme Generator is a command-line application that dynamically generates a 
 
 ## Images
 
-## Image of Application:
+
+### Image of app:
 
 
 **![Screenshot of Application](./App_SS.png)**
 
 
-## Sample README File Generated Using the app:
+### Sample README File Generated Using the app:
+
 
 **![Screenshot of Readme File Generated](./Readme_SS.png)**
 **![Screenshot of Readme File Generated](./Readme_SS2.png)**
