@@ -1,12 +1,12 @@
-# **clea**
+# **Readme Generator**
 
 
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
    
         
   ## Description  
   
-  asldkjf
+  This command line application generates a README file
   
   ## Table of Contents
     
@@ -24,15 +24,15 @@
   
   To install necessary dependencies, run the following command:
     
-      asldkfj
+      npm i
     
   ## Usage
       
-  sladfkj
+  clone this repo
 
   ## Contributors
         
-  
+  be respectful
 
   ## Test 
   
@@ -43,14 +43,14 @@
   
   ## License
   
-  This project is licensed under the MIT
+  This project is licensed under the IPL 1.0
     
 
   ## Questions
   
-  If you have any questions about the repo, please contact me directly at: 
+  If you have any questions about the repo, please contact me directly at: johnsoncm3@gmail.com
   
-  You can find more of my work at: 
+  You can find more of my work at: www.github.com/johnsoncm
     
     
     

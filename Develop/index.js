@@ -75,17 +75,18 @@ inquirer
     .prompt(questions)
     .then((data) => {
       
-    fs.writeFileSync('readme.md', objectMap.generateMarkdown(data.title, data.description, data.install, data.usage, data.contribution, 
-       data.test, data.license, data.github, data.email)
-              , (err) =>
+    fs.writeFileSync('projectREADME.md', objectMap.generateMarkdown(data.title, data.description, data.install, data.usage, data.contribution, 
+       data.test, data.license, data.github, data.email),
+       console.log("Successfully generated a readme file!"),
+               (err) =>
        err ? console.log(err) :
-       console.log(data),
+       console.log("Successfully generated a readme file!")
 
        )});
        
     }
 
-
+    
 // A function to initialize app
 function init() {
     console.log("Answer the prompts to generate a README.md")
