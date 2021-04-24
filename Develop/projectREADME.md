@@ -1,12 +1,12 @@
-# **Readme Generator**
+# ****
 
 
-[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
    
         
   ## Description  
   
-  This command line application generates a README file
+  
   
   ## Table of Contents
     
@@ -28,11 +28,11 @@
     
   ## Usage
       
-  clone this repo
+  
 
   ## Contributors
         
-  be respectful
+  
 
   ## Test 
   
@@ -43,14 +43,14 @@
   
   ## License
   
-  This project is licensed under the IPL 1.0
+  This project is licensed under the MIT
     
 
   ## Questions
   
-  If you have any questions about the repo, please contact me directly at: johnsoncm3@gmail.com
+  If you have any questions about the repo, please contact me directly at: 
   
-  You can find more of my work at: www.github.com/johnsoncm
+  You can find more of my work at: 
     
     
     
