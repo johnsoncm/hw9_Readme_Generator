@@ -88,7 +88,9 @@ inquirer
 
 // A function to initialize app
 function init() {
+    console.log("Answer the prompts to generate a README.md")
    writeToFile();
+ 
 
 }
 
