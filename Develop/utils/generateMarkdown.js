@@ -1,20 +1,14 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-
-const Choices = require("inquirer/lib/objects/choices");
-
-// const Choices = require('./Develop/index.js');
-console.log("choices" , Choices);
-
+//  A function that returns a license badge based on which license is passed in
+//  If there is no license, return an empty string
+//  This function also renders the license badge as a clickable link to that license info
 
 let licenseMarkdownText = '';
-// // If there is no license, return an empty string
+
 function renderLicenseBadge(license) {
-
-
 
   switch (license) {
     case 'MIT':
-    licenseMarkdownText = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    licenseMarkdownText = '[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
     break;
     case 'Apache 2.0':
       licenseMarkdownText = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
@@ -63,12 +57,13 @@ function renderLicenseBadge(license) {
 // // If there is no license, return an empty string
 // function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
+
 function generateMarkdown(title, description, install, usage, contribution, test, license, github, email) {
   let lmt = renderLicenseBadge(license)
   // let lml = renderLicenseLink(license)
   // console.log("lml: " , lml)
-  console.log("lmt: ", lmt)
+  // console.log("lmt: ", lmt)
 
   return `# **${title}**
 
@@ -127,6 +122,8 @@ ${lmt}
     
     `;
     }
+
+// Exports functions to access in index file
 
 module.exports = {
   generateMarkdown,
