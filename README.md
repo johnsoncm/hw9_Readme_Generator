@@ -51,19 +51,19 @@ The Readme Generator is a command-line application that dynamically generates a 
 ### Image of app:
 
 
-**![Screenshot of Application]()**
+**![Screenshot of Application](./App_Screenshot.png)**
 
 
 ### Sample README File Generated Using the app:
 
 
-**![Screenshot of Readme File Generated]()**
-**![Screenshot of Readme File Generated]()**
+**![Screenshot of Readme File Generated](./RM_Screenshot.png)**
+**![Screenshot of Readme File Generated](./RM_Screenshot2.png)**
 
 
 ## Demo
 
-**[Link to Walthrough Video]()**
+**[Link to Walkthrough Video](https://drive.google.com/file/d/1hOaXRpNRwTBOGkbq6IBKXvyR2mGXaLla/view)**
 
 ## Contact
 
